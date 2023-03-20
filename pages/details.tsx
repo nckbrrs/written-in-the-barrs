@@ -16,6 +16,7 @@ const Details: React.FC = () => (
           <StyledImage
             src={Map}
             fill
+            priority
             alt='map of cary with venue'
           />
         </ImageContainer>

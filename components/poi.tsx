@@ -17,7 +17,13 @@ const POI: React.FC<POIProps> = ({image, name, websiteHref, locationHref}) => {
         <Container>
             <ImageContainer>
                 <a href={websiteHref} target="_blank" rel="noopener noreferrer" tw="relative w-full h-full">
-                    <StyledImage fill sizes={'200px'} src={image} alt={`${name}-logo`}/>
+                    <StyledImage
+                        fill
+                        priority
+                        sizes={'200px'}
+                        src={image}
+                        alt={`${name}-logo`}
+                    />
                 </a>
             </ImageContainer>
             <Row tw="w-full">

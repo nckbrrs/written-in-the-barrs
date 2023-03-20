@@ -15,6 +15,7 @@ const Story: React.FC = () => (
         <StyledImage
           fill
           src={IrisPic}
+          priority
           alt='nick and brooke at a coffee shop'
         />
       </ImageContainer>
@@ -78,6 +79,7 @@ const Story: React.FC = () => (
         <StyledImage
           fill
           src={MtnPic}
+          priority
           alt='nick and brooke on a mountain'
         />
       </ImageContainer>

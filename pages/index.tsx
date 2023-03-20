@@ -11,12 +11,14 @@ const Home: React.FC = () => (
       <HeroImage
         src={Hero}
         fill
+        priority
         alt='Nick on one knee, proposing to Brooke in his living room'
       />
       <BlobContainer>
         <BlobImage
           src={BlobWithBranch}
           fill
+          priority
           alt='graphic blob with date and location of wedding'
           
         />

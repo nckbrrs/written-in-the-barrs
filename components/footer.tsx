@@ -10,6 +10,7 @@ const Footer: React.FC = () => {
             <ImageContainer>
                 <Image
                     fill
+                    priority
                     src={FooterNB} 
                     alt='N+B logo' 
                     tw="object-contain"

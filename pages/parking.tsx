@@ -10,7 +10,12 @@ const Parking: React.FC = () => (
     <Content>
       <ContentHeader text="PARKING"/>
       <ImageContainer>
-        <StyledImage src={ParkingGuide} fill alt='parking guide'/>
+        <StyledImage
+          src={ParkingGuide}
+          fill
+          priority
+          alt='parking guide'
+        />
       </ImageContainer>
     </Content>
   </Page>

@@ -14,7 +14,12 @@ const PartyMember: React.FC<PartyMemberProps> = ({name, image, title, picOnLeft}
     return (
         <Container picOnLeft={picOnLeft}>
             <ImageContainer picOnLeft={picOnLeft}>
-                <StyledImage fill src={image} alt={`weddingParty-${name}`}/>
+                <StyledImage
+                    fill
+                    priority
+                    src={image}
+                    alt={`weddingParty-${name}`}
+                />
             </ImageContainer>
             <NameLabel picOnLeft={picOnLeft}>
                 <NameLabelText variant={'name'}>{name.toUpperCase()}</NameLabelText>
