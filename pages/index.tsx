@@ -1,20 +1,21 @@
-import Head from 'next/head'
 import Image from 'next/image'
 import { Col, Row, RowCentered } from '../components/base';
 import 'twin.macro';
 import tw, { styled } from 'twin.macro';
+import Hero from '../public/images/hero.jpeg';
+import BlobWithBranch from '../public/images/blobWithBranch.png';
 
 const Home: React.FC = () => (
   <ContentContainer>
     <HeroAndBlobContainer>
       <HeroImage
-        src="/images/hero.jpeg"
+        src={Hero}
         fill
         alt='Nick on one knee, proposing to Brooke in his living room'
       />
       <BlobContainer>
         <BlobImage
-          src={"/images/blobWithBranch.png"}
+          src={BlobWithBranch}
           fill
           alt='graphic blob with date and location of wedding'
           

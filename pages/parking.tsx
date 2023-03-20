@@ -3,13 +3,14 @@ import { Col, Row } from '../components/base';
 import 'twin.macro';
 import ContentHeader from '../components/contentHeader';
 import tw, { styled } from 'twin.macro';
+import ParkingGuide from '../public/images/parkingGuide.png';
 
 const Parking: React.FC = () => (
   <Page>
     <Content>
       <ContentHeader text="PARKING"/>
       <ImageContainer>
-        <StyledImage src="/images/parkingGuide.png" fill alt='parking guide'/>
+        <StyledImage priority src={ParkingGuide} fill alt='parking guide'/>
       </ImageContainer>
     </Content>
   </Page>

@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import tw, { styled } from 'twin.macro';
 import { Col, Row  } from './base';
 import 'twin.macro';
@@ -7,17 +7,17 @@ import LocationIcon from './icons/Location';
 
 interface POIProps {
     name: string;
-    imagePath: string;
+    image: StaticImageData;
     websiteHref: string;
     locationHref?: string;
 }
 
-const POI: React.FC<POIProps> = ({imagePath, name, websiteHref, locationHref}) => {
+const POI: React.FC<POIProps> = ({image, name, websiteHref, locationHref}) => {
     return (
         <Container>
             <ImageContainer>
                 <a href={websiteHref} target="_blank" rel="noopener noreferrer">
-                    <StyledImage fill src={imagePath} alt={`${name}-logo`}/>
+                    <StyledImage priority quality={10} fill src={image} alt={`${name}-logo`}/>
                 </a>
             </ImageContainer>
             <Row tw="w-full">
@@ -59,6 +59,7 @@ const LinkIconContainer = styled(Row)(() => [
         fill-white
         rounded-3xl
         hover:bg-darkTerracotta
+        duration-100
     `
 ])
 

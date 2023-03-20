@@ -4,6 +4,8 @@ import { Col, Row } from '../components/base';
 import 'twin.macro';
 import ContentHeader from '../components/contentHeader';
 import tw, { styled } from 'twin.macro';
+import IrisPic from '../public/images/nickAndBrooke/iris.jpg';
+import MtnPic from '../public/images/nickAndBrooke/mountain.jpeg';
 
 const Story: React.FC = () => (
   <Page>
@@ -11,8 +13,9 @@ const Story: React.FC = () => (
       <ContentHeader text="OUR STORY"/>
       <ImageContainer>
         <StyledImage
+          priority
           fill
-          src="/images/nickAndBrooke/iris.jpg"
+          src={IrisPic}
           alt='nick and brooke at a coffee shop'
         />
       </ImageContainer>
@@ -74,8 +77,9 @@ const Story: React.FC = () => (
       </StoriesContainer>
       <ImageContainer>
         <StyledImage
+          priority
           fill
-          src="/images/nickAndBrooke/mountain.jpeg"
+          src={MtnPic}
           alt='nick and brooke on a mountain'
         />
       </ImageContainer>

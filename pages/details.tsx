@@ -5,6 +5,7 @@ import ContentHeader from '../components/contentHeader';
 import ClockIcon from '../components/icons/Clock';
 import LocationIcon from '../components/icons/Location';
 import tw, { styled } from 'twin.macro';
+import Map from '../public/images/map.png';
 
 const Details: React.FC = () => (
   <Page>
@@ -13,7 +14,8 @@ const Details: React.FC = () => (
       <SubContainer>
         <ImageContainer>
           <StyledImage
-            src="/images/map.png"
+            priority
+            src={Map}
             fill
             alt='map of cary with venue'
           />

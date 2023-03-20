@@ -4,6 +4,9 @@ import 'twin.macro';
 import ContentHeader from '../components/contentHeader';
 import POI from '../components/poi';
 import tw, { styled } from 'twin.macro';
+import CB from '../public/images/registry/cb.png';
+import Target from '../public/images/registry/target.png';
+import Amazon from '../public/images/registry/amazon.png';
 
 const Details: React.FC = () => (
   <Page>
@@ -11,7 +14,7 @@ const Details: React.FC = () => (
     <Content>
       {registries.map((r) => 
         <POI
-          imagePath={r.imagePath}
+          image={r.image}
           name={r.name}
           websiteHref={r.websiteHref}
         />
@@ -25,17 +28,17 @@ export default Details;
 const registries = [
   {
     name: 'CRATE & BARREL',
-    imagePath: '/images/registry/cb.png',
+    image: CB,
     websiteHref: 'https://www.crateandbarrel.com/gift-registry/brooke-barrs-and-nick-barrs/r6515129'
   },
   {
     name: 'AMAZON',
-    imagePath: '/images/registry/amazon.png',
+    image: Amazon,
     websiteHref: 'https://www.amazon.com/wedding/share/writteninthebarrs'
   },
   {
     name: 'TARGET',
-    imagePath: '/images/registry/target.png',
+    image: Target,
     websiteHref: 'https://www.target.com/gift-registry/gift/writteninthebarrs'
   }
 ]

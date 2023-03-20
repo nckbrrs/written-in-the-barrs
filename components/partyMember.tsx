@@ -1,20 +1,20 @@
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import tw, { styled } from 'twin.macro';
 import { Col, Row  } from './base';
 import 'twin.macro';
 
 interface PartyMemberProps {
     name: string;
-    imagePath: string;
+    image: StaticImageData;
     title: string;
     picOnLeft?: boolean;
 }
 
-const PartyMember: React.FC<PartyMemberProps> = ({name, imagePath, title, picOnLeft}) => {
+const PartyMember: React.FC<PartyMemberProps> = ({name, image, title, picOnLeft}) => {
     return (
         <Container picOnLeft={picOnLeft}>
             <ImageContainer picOnLeft={picOnLeft}>
-                <StyledImage fill src={imagePath} alt={`weddingParty-${name}`}/>
+                <StyledImage priority fill src={image} alt={`weddingParty-${name}`}/>
             </ImageContainer>
             <NameLabel picOnLeft={picOnLeft}>
                 <NameLabelText variant={'name'}>{name.toUpperCase()}</NameLabelText>

@@ -2,12 +2,18 @@ import Image from 'next/image';
 import tw, { styled } from 'twin.macro';
 import { Row  } from './base';
 import 'twin.macro';
+import FooterNB from '../public/images/footerNB.png';
 
 const Footer: React.FC = () => {
     return (
         <Container>
             <ImageContainer>
-                <Image src={"/images/footerNB.png"} fill alt='N+B logo' tw="object-contain"/>
+                <Image
+                    fill
+                    src={FooterNB} 
+                    alt='N+B logo' 
+                    tw="object-contain"
+                />
             </ImageContainer>
         </Container>
     )
