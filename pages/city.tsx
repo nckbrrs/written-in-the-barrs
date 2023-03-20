@@ -29,12 +29,13 @@ const City: React.FC = () => (
     <Content>
       <ContentHeader text="OUR CITY"/>
       {Object.entries(POIs).map(([category, pois]) => {
-        return <>
-          <CategoryHeader>{category.toUpperCase()}</CategoryHeader>
-          <PoiRow>
+        return <span key={`poi-category-container-${category}`}>
+          <CategoryHeader key={`categoryHeader-${category}`}>{category.toUpperCase()}</CategoryHeader>
+          <PoiRow key={`poiRow-${category}`}>
             {pois.map((p) =>
-              <PoiContainer>
+              <PoiContainer key={`poiContainer-${category} - ${p.name}`}>
                 <POI
+                  key={`poi-${category} - ${p.name}`}
                   name={p.name}
                   image={p.image}
                   websiteHref={p.websiteHref}
@@ -43,7 +44,7 @@ const City: React.FC = () => (
               </PoiContainer>
             )}
           </PoiRow>
-        </>
+        </span>
       })}
     </Content>
   </Page>

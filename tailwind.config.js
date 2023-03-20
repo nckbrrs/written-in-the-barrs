@@ -56,5 +56,8 @@ module.exports = {
       minHeight
     },
   },
-  plugins: []
+  plugins: [],
+  experimental: {
+    optimizeUniversalDefaults: true
+  }
 }

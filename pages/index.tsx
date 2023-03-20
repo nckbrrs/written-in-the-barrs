@@ -35,15 +35,15 @@ const HeroImage = styled(Image)(() => [
     object-cover
     object-center
     rounded-[20px]
-    drop-shadow-md
-  `
+    drop-shadow-[0px 3px 3px rgb(0 0 0 / 0.05)]
+    `
 ])
 
 const BlobImage = styled(Image)(() => [
   tw`
     object-cover
-    drop-shadow-md
-  `
+    drop-shadow-[0px 3px 3px rgb(0 0 0 / 0.05)]
+    `
 ])
 
 const ContentContainer = styled(Col)(() => [

@@ -1,5 +1,5 @@
 import tw, { styled } from "twin.macro";
-import { Col, Row } from "./base";
+import { Col, MotionCol, MotionRow, Row } from "./base";
 import 'twin.macro';
 
 interface HamburgerProps {
@@ -17,7 +17,7 @@ const Hamburger: React.FC<HamburgerProps> = ({state, onClick}) => {
     )
 }
 
-const Container = styled(Col)(() => [
+const Container = styled(MotionCol)(() => [
     tw`
        z-20
        w-6
@@ -30,7 +30,7 @@ const Container = styled(Col)(() => [
     `
 ])
 
-const HamburgerBar = styled(Row)(() => [
+const HamburgerBar = styled(MotionRow)(() => [
     tw`
         w-full
         h-[1px]

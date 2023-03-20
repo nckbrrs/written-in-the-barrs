@@ -16,8 +16,8 @@ const POI: React.FC<POIProps> = ({image, name, websiteHref, locationHref}) => {
     return (
         <Container>
             <ImageContainer>
-                <a href={websiteHref} target="_blank" rel="noopener noreferrer">
-                    <StyledImage priority quality={10} fill src={image} alt={`${name}-logo`}/>
+                <a href={websiteHref} target="_blank" rel="noopener noreferrer" tw="relative w-full h-full">
+                    <StyledImage fill sizes={'200px'} src={image} alt={`${name}-logo`}/>
                 </a>
             </ImageContainer>
             <Row tw="w-full">
@@ -67,7 +67,6 @@ const LinkRow = styled(Row)(() => [
     tw`
         w-full
         justify-start
-        drop-shadow-sm
         space-x-2 lg:space-x-4
     `
 ])
@@ -89,7 +88,8 @@ const ImageContainer = styled(Row)(() => [
         w-full
         h-full
         aspect-square
-        drop-shadow-md
+        shadow-[0px 1px 1px rgb(0 0 0 / 0.05)]
+
     `
 ])
 
@@ -109,7 +109,7 @@ const Container = styled(Col)(() => [
         p-3 lg:p-5
         w-full
         space-y-3
-        drop-shadow-md
+        shadow-[0px 3px 3px rgb(0 0 0 / 0.05)]
     `
 ])
 

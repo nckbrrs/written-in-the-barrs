@@ -13,7 +13,6 @@ const Story: React.FC = () => (
       <ContentHeader text="OUR STORY"/>
       <ImageContainer>
         <StyledImage
-          priority
           fill
           src={IrisPic}
           alt='nick and brooke at a coffee shop'
@@ -77,7 +76,6 @@ const Story: React.FC = () => (
       </StoriesContainer>
       <ImageContainer>
         <StyledImage
-          priority
           fill
           src={MtnPic}
           alt='nick and brooke on a mountain'
@@ -118,7 +116,7 @@ const StyledImage = styled(Image)(() => [
   tw`
     object-cover
     object-top
-    drop-shadow-md
+    shadow-[0px 3px 3px rgb(0 0 0 / 0.05)]
     rounded-3xl
   `
 ])

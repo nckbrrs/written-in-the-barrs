@@ -10,7 +10,7 @@ const Parking: React.FC = () => (
     <Content>
       <ContentHeader text="PARKING"/>
       <ImageContainer>
-        <StyledImage priority src={ParkingGuide} fill alt='parking guide'/>
+        <StyledImage src={ParkingGuide} fill alt='parking guide'/>
       </ImageContainer>
     </Content>
   </Page>
@@ -46,6 +46,6 @@ const ImageContainer = styled(Row)(() => [
 const StyledImage = styled(Image)(() => [
   tw`
     object-contain
-    drop-shadow-lg
-  `
+    drop-shadow-[0px 5px 5px rgb(0 0 0 / 0.05)]
+    `
 ])

@@ -14,7 +14,6 @@ const Details: React.FC = () => (
       <SubContainer>
         <ImageContainer>
           <StyledImage
-            priority
             src={Map}
             fill
             alt='map of cary with venue'
@@ -88,7 +87,7 @@ const ImageContainer = styled(Row)(() => [
 const StyledImage = styled(Image)(() => [
   tw`
     object-contain
-    drop-shadow-md
+    drop-shadow-[0px 3px 3px rgb(0 0 0 / 0.05)]
   `
 ])
 

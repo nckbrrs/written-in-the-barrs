@@ -1,14 +1,28 @@
 import { motion } from "framer-motion";
 import tw, { styled } from "twin.macro";
 
-export const Row = styled(motion.div)(() => [
+export const Row = styled.div(() => [
     tw`
         flex
         flex-row
     `
 ])
 
-export const Col = styled(motion.div)(() => [
+export const MotionRow = styled(motion.div)(() => [
+    tw`
+        flex
+        flex-row
+    `
+])
+
+export const Col = styled.div(() => [
+    tw`
+        flex
+        flex-col
+    `
+])
+
+export const MotionCol = styled(motion.div)(() => [
     tw`
         flex
         flex-col

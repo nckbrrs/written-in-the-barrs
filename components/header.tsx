@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ColCentered, Row } from './base';
+import { ColCentered, MotionCol, Row } from './base';
 import 'twin.macro';
 import tw, { styled } from "twin.macro";
 import { useState } from 'react';
@@ -70,16 +70,18 @@ const Container = styled(Row)(() => [
     `
 ])
 
-const HamburgerContainer = styled(ColCentered)(() => [
+const HamburgerContainer = styled(MotionCol)(() => [
     tw`
         w-full
         h-screen
         space-y-2
         bg-bone
-        top-0 // maybe negative for some reason
+        top-0
         z-10
         absolute
         lg:hidden
+        justify-center
+        items-center
     `
 ])
 
@@ -126,6 +128,7 @@ const HeaderLinkText = styled.p(() => [
         text-darkTerracotta
         duration-200
         hover:-translate-y-1
-        hover:drop-shadow-sm
+        hover:drop-shadow-[0px 1px 1px rgb(0 0 0 / 0.05)]
+
     `   
 ])
