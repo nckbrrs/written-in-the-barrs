@@ -1,16 +1,35 @@
-import { Col, Row  } from './base';
+import Image from 'next/image';
+import tw, { styled } from 'twin.macro';
+import { Row  } from './base';
 import 'twin.macro';
-
 
 const Footer: React.FC = () => {
     return (
-        <Row tw="justify-between items-center pt-10 pb-4 sm:py-20">
-            <p>footer left element</p>
-            <p>footer right element</p>
-        </Row>
+        <Container>
+            <ImageContainer>
+                <Image src={"/images/footerNB.png"} fill alt='N+B logo' tw="object-contain"/>
+            </ImageContainer>
+        </Container>
     )
 }
 
+const Container = styled(Row)(() => [
+    tw`
+        justify-center
+        items-center
+        pt-10 
+        pb-8 
+        xl:pb-20
+        opacity-0 lg:opacity-100
+    `
+])
+
+const ImageContainer = styled(Row)(() => [
+    tw`
+        relative
+        w-full
+        h-10
+    `
+])
+
 export default Footer;
-
-

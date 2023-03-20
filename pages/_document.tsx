@@ -7,7 +7,14 @@ const MyDocument = () => {
     <Html>
       <Head>
         <meta charSet="utf-8"/>
-        <meta name="theme-color" content="#fbf6f1"/>
+        <meta name="theme-color" content="#e9e9e9" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Nick & Brooke"/>
+        <meta property="og:description" content=""/>
+        <meta property="og:image" content="https://i.imgur.com/w6IT0Ul.png"/>
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:creator" content="@nckbrrs" />
+        <meta name="twitter:image" content="https://i.imgur.com/P6AL6S8.png"/>
       </Head>
       <body>
         <Main />

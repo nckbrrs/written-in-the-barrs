@@ -6,12 +6,20 @@ const colors = {
   ...defaultColors,
   ...{
     black: '#212121',
-    bone: '#fbf6f1',
+    bone: '#e9e9e9',
+    darkTerracotta: '#A96D4F',
+    lightTerracotta: '#c3996f',
+    lightSky: '#7DBCD8',
+    darkSky: '#4988A3'
   },
 }
 
 const fontFamily = {
-  'sans': ["Helvetica Neue", "ui-sans-serif", "system-ui", "-apple-system", "Arial", "sans-serif"]
+  'sans': ["Helvetica Neue", "ui-sans-serif", "system-ui", "-apple-system", "Arial", "sans-serif"],
+  'paris': 'Paris',
+  'weiss': 'Weiss',
+  'weiss-bold': 'Weiss-Bold'
+  
 }
 
 const letterSpacing = {
@@ -23,6 +31,7 @@ const letterSpacing = {
   wide: '.025em',
   wider: '.05em',
   widest: '.1em',
+  superwide: '0.375em'
 }
 
 const height = {
