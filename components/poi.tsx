@@ -94,7 +94,6 @@ const ImageContainer = styled(Row)(() => [
         w-full
         h-full
         aspect-square
-        shadow-[0px 1px 1px rgb(0 0 0 / 0.05)]
 
     `
 ])
