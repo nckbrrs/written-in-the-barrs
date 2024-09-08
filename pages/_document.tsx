@@ -15,6 +15,16 @@ const MyDocument = () => {
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:creator" content="@nckbrrs" />
         <meta name="twitter:image" content="https://i.imgur.com/P6AL6S8.png"/>
+        <meta charSet="utf-8"/>
+        <meta name="theme-color" content="#fbf6f1"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin=""/>
+        <link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+        <link rel="apple-touch-icon" sizes="180x180" href="/icon-180.png"/>
+        <link rel="icon" type="image/png" sizes="32x32" href="/icon-32.png"/>
+        <link rel="icon" type="image/png" sizes="16x16" href="/icon-16.png"/>
+        <link rel="manifest" href="/manifest.json"/>
+        <link rel="mask-icon" href="/icon.svg" color="#212121"/>
       </Head>
       <body>
         <Main />
