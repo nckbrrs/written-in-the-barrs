@@ -17,4 +17,5 @@ const containerStyling = `
 	justify-center
 	items-start
 	pt-8 md:pt-20
+	pb-20
 `;

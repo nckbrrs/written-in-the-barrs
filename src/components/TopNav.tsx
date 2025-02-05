@@ -19,7 +19,9 @@ export default function TopNav() {
 
 	const closeFullScreenMenu = () => {
 		enableScroll();
-		setFullScreenMenuIsOpen(false);
+		setTimeout(() => {
+			setFullScreenMenuIsOpen(false);
+		}, 100);
 	};
 
 	const disableScroll = () => {
@@ -153,7 +155,7 @@ const topNavContainerStyling = `
 	max-w-[1600px]
 	px-12
 	items-center
-	pt-10 md:pt-14 lg:pt-20
+	pt-10 md:pt-14
 	relative
 `;
 

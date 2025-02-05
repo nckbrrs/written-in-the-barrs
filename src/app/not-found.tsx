@@ -18,38 +18,9 @@ export default function NotFound() {
 		}
 	}, [secondsOnPage]);
 
-	const containerStyling = `
-		flex
-		flex-col
-		justify-center
-		items-center
-		w-full
-		h-full
-	`;
-
-	const oopsStyling = `
-		font-weiss
-		text-2xl lg:text-5xl
-		font-bold
-		text-darkSky
-		text-center
-	`;
-
-	const redirectStyling = `
-		font-weiss
-		text-lg lg:text-2xl
-		text-darkSky
-		text-center
-		px-4
-	`;
-
-	const secondsStyling = `
-		font-bold
-		text-2xl
-	`;
-
 	return (
 		<div className={containerStyling}>
+			<p className={shrugStyling}>🤷‍♂️</p>
 			<p className={oopsStyling}>Oops! There's nothing here!</p>
 			<p className={redirectStyling}>
 				In{" "}
@@ -63,3 +34,38 @@ export default function NotFound() {
 		</div>
 	);
 }
+
+const containerStyling = `
+	flex
+	flex-col
+	justify-center
+	items-center
+	w-full
+	h-full
+`;
+
+const shrugStyling = `
+	text-4xl
+	mb-2
+`;
+
+const oopsStyling = `
+	font-weiss
+	text-2xl lg:text-5xl
+	font-bold
+	text-darkSky
+	text-center
+`;
+
+const redirectStyling = `
+	font-weiss
+	text-lg lg:text-2xl
+	text-darkSky
+	text-center
+	px-4
+`;
+
+const secondsStyling = `
+	font-bold
+	text-2xl
+`;

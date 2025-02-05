@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 	metadataBase: new URL(
 		process.env.NODE_ENV == "development"
 			? "http://localhost:3000"
-			: "https://written-in-the-barrs.vercel.app"
+			: "https://writteninthebarrs.com"
 	),
 	title: "Written in the Barrs",
 	description: "Nick and Brooke's wedding website",
@@ -27,10 +27,10 @@ export const metadata: Metadata = {
 		type: "website",
 		images: [
 			{
-				url: "/open-graph-img.png",
+				url: "https://i.imgur.com/w6IT0Ul.png",
 				width: 1200,
 				height: 630,
-				alt: "Preview image for written-in-the-barrs.vercel.app"
+				alt: "Preview image for writteninthebarrs.com"
 			}
 		]
 	}
