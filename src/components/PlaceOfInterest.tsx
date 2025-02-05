@@ -23,6 +23,7 @@ export default function PlaceOfInterest(props: POIProps) {
 						className={imageStyling}
 						src={props.imageSrc}
 						alt={`${props.name}-logo`}
+						loading="eager"
 					/>
 				</Link>
 			</div>

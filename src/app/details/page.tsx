@@ -10,6 +10,7 @@ export default function Details() {
 					src="/images/map.png"
 					alt="map of Cary, NC with venue"
 					className={"min-h-[0px] object-scale-down "}
+					loading="eager"
 				/>
 				<div className={detailsContainerStyling}>
 					<div className={"flex flex-col items-center"}>

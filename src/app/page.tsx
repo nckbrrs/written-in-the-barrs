@@ -14,6 +14,7 @@ export default function Home() {
 						src="images/blobWithBranch.png"
 						alt="graphic blob with date and location of wedding"
 						className={blogImgStyling}
+						loading="eager"
 					/>
 					<p className={blobTextStyling}>
 						JUNE 24, 2022

@@ -9,6 +9,7 @@ export default function Story() {
 					className={imageStyling}
 					src={"/images/nickAndBrooke/iris.jpg"}
 					alt="black & white photo of nick and brooke at a coffee shop"
+					loading="eager"
 				/>
 			</div>
 			<div className={storiesContainerStyling}>
@@ -223,6 +224,7 @@ export default function Story() {
 					className={imageStyling}
 					src={"images/nickAndBrooke/mountain.jpeg"}
 					alt="nick and brooke on a mountain"
+					loading="eager"
 				/>
 			</div>
 		</div>

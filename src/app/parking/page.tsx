@@ -11,6 +11,7 @@ export default function Parking() {
 						className={imgStyling}
 						src="/images/parkingGuide.png"
 						alt="parking guide"
+						loading="eager"
 					/>
 				</div>
 			</div>

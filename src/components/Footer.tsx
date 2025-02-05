@@ -5,6 +5,7 @@ export default function Footer() {
 				src="images/footerNB.png"
 				alt="logo"
 				className="w-24 md:w-40"
+				loading="eager"
 			/>
 		</div>
 	);

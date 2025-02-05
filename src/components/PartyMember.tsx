@@ -21,12 +21,11 @@ export default function PartyMember(props: PartyMemberProps) {
 						: imageContainerStylingRight
 				}
 			>
-				<Image
+				<img
 					className={imgStyling}
 					src={props.imageSrc}
-					fill
-					priority
 					alt={`weddingParty-${props.name}`}
+					loading="eager"
 				/>
 			</div>
 			<div
