@@ -64,5 +64,4 @@ const subContainerStyling = `
     space-y-7 md:space-y-0
     md:flex-row
     md:space-x-8
-
 `;

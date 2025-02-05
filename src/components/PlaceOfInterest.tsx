@@ -84,6 +84,9 @@ const containerStyling = `
 `;
 
 const imageStyling = `
+	w-full
+	h-full
+	grow
 	rounded-2xl
 	object-cover
 `;
