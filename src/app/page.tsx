@@ -50,7 +50,7 @@ const subContainerStyling = `
 
 const heroImageStyling = `
 	object-cover
-	object-center
+	object-[50%_70%]
 	rounded-2xl
 	drop-shadow-md
 	grow
