@@ -46,9 +46,11 @@ const containerStyling = `
 	grow
 	justify-start
 	items-center
-	pt-8
 	px-12 sm:px-16 md:px-0
 	max-w-[1000px]
+	max-h-screen md:max-h-[calc(100vh-16rem)]
+	pt-8
+	pb-8
 `;
 
 const subContainerStyling = `

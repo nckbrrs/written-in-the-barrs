@@ -13,9 +13,7 @@ export default function Footer() {
 const containerStyling = `
 	flex
 	w-full
-	h-24 md:h-48
 	justify-center
 	items-start
-	pt-8 md:pt-20
-	pb-20
+	py-8
 `;

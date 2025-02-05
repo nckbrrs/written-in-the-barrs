@@ -19,8 +19,10 @@ const pageContainer = `
 	h-full
 	justify-start
 	items-center
-	pt-8
 	max-w-[1600px]
+	max-h-screen md:max-h-[calc(100vh-16rem)]
+	pt-8
+	pb-8
 `;
 
 const subContainer = `

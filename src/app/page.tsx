@@ -30,11 +30,11 @@ const containerStyling = `
 	flex
 	flex-col
 	grow
-	max-h-screen md:max-h-[calc(100vh-20rem)]
+	max-h-screen md:max-h-[calc(100vh-15rem)]
 	justify-center
 	items-center
 	pt-8 
-	pb-10 md:pb-0
+	pb-10 md:pb-6
 	px-6 md:px-14 lg:px-24
 	max-w-[1600px]
 	relative
