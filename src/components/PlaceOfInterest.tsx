@@ -81,7 +81,6 @@ const containerStyling = `
 	shadow-[0px 3px 3px rgb(0 0 0 / 0.05)]
 	transition-transform
 	duration-200
-	hover:-translate-y-1
 `;
 
 const imageStyling = `
