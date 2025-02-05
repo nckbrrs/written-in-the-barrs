@@ -1,62 +1,6 @@
 "use client";
 
 export default function Home() {
-	const containerStyling = `
-		flex
-		flex-col
-		grow
-		max-h-screen
-		justify-center
-		items-center
-		pt-8 
-		pb-28 md:pb-0
-		px-6 md:px-14 lg:px-24
-		max-w-[1600px]
-		relative
-	`;
-
-	const subContainerStyling = `
-		flex
-		flex-row
-		h-full 2xl:h-fit
-		justify-center
-		relative
-	`;
-
-	const heroImageStyling = `
-		object-cover
-		object-center
-		rounded-2xl
-		drop-shadow-md
-		grow
-		2xl:aspect-video
-	`;
-
-	const blobContainerStyling = `
-		flex
-		flex-row
-		justify-center
-		items-center
-		w-48 md:w-64
-		absolute
-		-bottom-[3.4em]
-		-right-3
-	`;
-
-	const blobTextStyling = `
-		absolute
-		font-weiss
-		text-darkTerracotta
-		-translate-x-[20%]
-		translate-y-[15%]
-		md:text-xl 
-	`;
-
-	const blogImgStyling = `
-		object-cover
-		drop-shadow-md
-	`;
-
 	return (
 		<div className={containerStyling}>
 			<div className={subContainerStyling}>
@@ -81,3 +25,59 @@ export default function Home() {
 		</div>
 	);
 }
+
+const containerStyling = `
+	flex
+	flex-col
+	grow
+	max-h-screen
+	justify-center
+	items-center
+	pt-8 
+	pb-10 md:pb-0
+	px-6 md:px-14 lg:px-24
+	max-w-[1600px]
+	relative
+`;
+
+const subContainerStyling = `
+	flex
+	flex-row
+	h-full 2xl:h-fit
+	justify-center
+	relative
+`;
+
+const heroImageStyling = `
+	object-cover
+	object-center
+	rounded-2xl
+	drop-shadow-md
+	grow
+	
+`;
+
+const blobContainerStyling = `
+	flex
+	flex-row
+	justify-center
+	items-center
+	w-48 md:w-64
+	absolute
+	-bottom-[3.4em]
+	-right-3
+`;
+
+const blobTextStyling = `
+	absolute
+	font-weiss
+	text-darkTerracotta
+	-translate-x-[20%]
+	translate-y-[15%]
+	md:text-xl 
+`;
+
+const blogImgStyling = `
+	object-cover
+	drop-shadow-md
+`;

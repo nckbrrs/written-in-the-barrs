@@ -92,4 +92,5 @@ const bodyContainerStyling = `
 	h-screen
 	w-full
 	items-center
+	bg-bone
 `;

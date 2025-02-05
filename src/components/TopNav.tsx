@@ -120,24 +120,20 @@ export default function TopNav() {
 							className="hidden lg:flex"
 							href={link.href}
 						>
-							<p className="font-weiss tracking-[0.2rem] font-semibold text-darkTerracotta duration-200 hover:-translate-y-1 ">
-								{link.text}
-							</p>
+							<p className={headerLinkStyling}>{link.text}</p>
 						</Link>
 					].concat(
 						idx === 2 ? (
 							<Link
 								key={`headerLink-LOGO`}
 								href="/"
-								className="flex flex-col items-center justify-center"
+								className={logoContainerStyling}
 							>
-								<p className="text-darkTerracotta text-3xl md:text-5xl font-weiss whitespace-nowrap">
+								<p className={logoNameStyling}>
 									NICK <span className="font-paris">&</span>{" "}
 									BROOKE
 								</p>
-								<p className="text-darkTerracotta font-sans text-sm tracking-[0.375rem]">
-									06.24.2022
-								</p>
+								<p className={logoDateStyling}>06.24.2022</p>
 							</Link>
 						) : (
 							[]
@@ -166,15 +162,47 @@ const hamburgerContainerStyling = `
 	flex-col
 	w-14
 	h-14
+	scale-75 md:scale-100
 	absolute
 	cursor-pointer
 	duration-75
-	hover:scale-110
-	left-6 md:left-10
+	hover:scale-90 md:hover:scale-110
+	left-4 md:left-10
 	top-8 md:top-14
 	z-20
 	p-2
 	rounded-md
-
 	lg:hidden
+`;
+
+const logoContainerStyling = `
+	flex
+	flex-col
+	items-center
+	justify-center
+`;
+
+const headerLinkStyling = `
+	font-weiss
+	tracking-widest
+	font-semibold
+	text-darkTerracotta
+	duration-100
+	transition-transform
+	hover:-translate-y-1
+`;
+
+const logoNameStyling = `
+	text-darkTerracotta
+	text-3xl
+	md:text-5xl
+	font-weiss
+	whitespace-nowrap
+`;
+
+const logoDateStyling = `
+	text-darkTerracotta
+	font-sans 
+	text-sm
+	tracking-[0.375rem]
 `;

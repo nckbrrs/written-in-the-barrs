@@ -45,8 +45,7 @@ const fullScreenMenuContainerStyling = `
 	flex-row 
     w-full
     h-full
-    space-y-2
-	backdrop-blur-3xl
+	bg-bone
     left-0 
     top-0 
     justify-center 
@@ -60,9 +59,9 @@ const menuLinksColStyling = `
     flex-col
     flex-wrap
     group
-    items-start
+    items-center
     justify-center
-    space-y-0 lg:space-y-1
+    space-y-2 lg:space-y-1
     translate-y-2 
 `;
 
@@ -70,15 +69,15 @@ const linkTextStyling = `
 	w-full
 	px-2
     text-4xl md:text-5xl lg:text-7xl
-    font-bold
-	font-serif
-	text-bone
-	text-left
+	font-weiss
+	font-semibold
+	text-darkTerracotta
+	text-center
+	tracking-wide
     duration-200
     group-hover:opacity-25
-    group-hover:blur-[2px]
+    group-hover:blur-[1px]
     hover:!opacity-100
     hover:!blur-0
-	hover:translate-x-3
-	[text-shadow:_2px_2px_3px_#212121]
+	hover:-translate-y-1
 `;
