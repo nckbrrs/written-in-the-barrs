@@ -12,6 +12,8 @@ export default function Parking() {
 				width="0"
 				height="0"
 				sizes="100%"
+				priority
+				fetchPriority="high"
 			/>
 		</div>
 	);

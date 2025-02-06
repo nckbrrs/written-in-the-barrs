@@ -28,6 +28,8 @@ export default function PartyMember(props: PartyMemberProps) {
 					width="0"
 					height="0"
 					sizes="100%"
+					priority
+					fetchPriority="high"
 				/>
 			</div>
 			<div

@@ -226,6 +226,7 @@ const pageContainerStyling = `
 	items-center
 	pt-8
 	px-6 md:px-24 lg:px-16 xl:px-36
+	max-w-[1600px]
 `;
 
 const categoryHeaderStyling = `

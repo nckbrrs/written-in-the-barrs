@@ -10,6 +10,8 @@ export default function Footer() {
 				height="0"
 				sizes="100%"
 				className={imgStyling}
+				priority
+				fetchPriority="high"
 			/>
 		</div>
 	);
