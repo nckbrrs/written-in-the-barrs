@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import { LinkIcon, MapPin } from "lucide-react";
+import Image from "next/image";
 
 type POIProps = {
 	name: string;
@@ -12,21 +12,21 @@ type POIProps = {
 export default function PlaceOfInterest(props: POIProps) {
 	return (
 		<div className={containerStyling}>
-			<div className={imageContainerStyling}>
-				<Link
-					className="relative w-full h-full"
-					href={props.websiteHref}
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					<img
-						className={imageStyling}
-						src={props.imageSrc}
-						alt={`${props.name}-logo`}
-						loading="eager"
-					/>
-				</Link>
-			</div>
+			<Link
+				className="w-full relative"
+				href={props.websiteHref}
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<Image
+					className={imageStyling}
+					src={props.imageSrc}
+					alt={`${props.name}-logo`}
+					width="0"
+					height="0"
+					sizes="100%"
+				/>
+			</Link>
 			<div className="flex flex-row w-full">
 				<div className={nameTextStyling}>
 					{props.name.includes("\n") ? (
@@ -71,22 +71,20 @@ export default function PlaceOfInterest(props: POIProps) {
 const containerStyling = `
 	flex
 	flex-col
+	min-w-32
 	justify-center
 	items-center
 	bg-white
 	rounded-3xl
 	p-3 lg:p-5
-	w-full
 	space-y-3
-	shadow-[0px 3px 3px rgb(0 0 0 / 0.05)]
+	drop-shadow-sm
 	transition-transform
-	duration-200
 `;
 
 const imageStyling = `
 	w-full
 	h-full
-	grow
 	rounded-2xl
 	object-cover
 `;
@@ -97,6 +95,7 @@ const imageContainerStyling = `
 	relative
 	w-full
 	h-full
+	bg-red-400
 	aspect-square
 `;
 

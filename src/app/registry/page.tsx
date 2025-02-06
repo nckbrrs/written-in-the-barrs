@@ -5,19 +5,22 @@ export default function Registry() {
 	const registries = [
 		{
 			name: "CRATE & BARREL",
-			imageSrc: "/images/registry/cb.png",
+			imageSrc:
+				"https://huy0t4exz6.ufs.sh/f/G7HhnnrqUvCAGr6rHMqUvCAKTafW1Oprx4zwIyLVEMeX2gQo",
 			websiteHref:
 				"https://www.crateandbarrel.com/gift-registry/brooke-barrs-and-nick-barrs/r6515129"
 		},
 		{
 			name: "AMAZON",
-			imageSrc: "/images/registry/amazon.png",
+			imageSrc:
+				"https://huy0t4exz6.ufs.sh/f/G7HhnnrqUvCA1Bw376UCrLKcVt7jz6qxduhmf8wQOP324YXk",
 			websiteHref:
 				"https://www.amazon.com/wedding/share/writteninthebarrs"
 		},
 		{
 			name: "TARGET",
-			imageSrc: "/images/registry/target.png",
+			imageSrc:
+				"https://huy0t4exz6.ufs.sh/f/G7HhnnrqUvCALPVdXv1UnBLz8ZsjXfQc0PqF9TAp5NSDtwYV",
 			websiteHref:
 				"https://www.target.com/gift-registry/gift/writteninthebarrs"
 		}

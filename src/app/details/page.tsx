@@ -1,16 +1,19 @@
 import { Clock, MapPin } from "lucide-react";
 import ContentHeader from "~/components/ContentHeader";
+import Image from "next/image";
 
 export default function Details() {
 	return (
 		<div className={pageContainerStyling}>
 			<ContentHeader text="DETAILS" />
 			<div className={subContainerStyling}>
-				<img
-					src="/images/map.png"
+				<Image
+					src="https://huy0t4exz6.ufs.sh/f/G7HhnnrqUvCA0mazwOtxzKDG5VULlBdwZ3RFxyaToPgjIWiE"
 					alt="map of Cary, NC with venue"
-					className={"min-h-[0px] object-scale-down "}
-					loading="eager"
+					width="0"
+					height="0"
+					sizes="100%"
+					className={imgStyling}
 				/>
 				<div className={detailsContainerStyling}>
 					<div className={"flex flex-col items-center"}>
@@ -51,8 +54,15 @@ const subContainerStyling = `
 	flex-col
 	h-full
 	overflow-hidden
-	px-4 md:px-0
+	px-4 md:px-8 lg:px-20
 	justify-start
+	relative
+`;
+
+const imgStyling = `
+	w-full
+	min-h-[0px]
+	object-scale-down
 `;
 
 const detailsContainerStyling = `

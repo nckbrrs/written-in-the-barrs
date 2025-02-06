@@ -4,17 +4,15 @@ import ContentHeader from "~/components/ContentHeader";
 export default function Parking() {
 	return (
 		<div className={containerStyling}>
-			<div className={contentStyling}>
-				<ContentHeader text="PARKING" />
-				<div className={imageContainerStyling}>
-					<img
-						className={imgStyling}
-						src="/images/parkingGuide.png"
-						alt="parking guide"
-						loading="eager"
-					/>
-				</div>
-			</div>
+			<ContentHeader text="PARKING" />
+			<Image
+				className={imgStyling}
+				src="https://huy0t4exz6.ufs.sh/f/G7HhnnrqUvCAGYSMQfqUvCAKTafW1Oprx4zwIyLVEMeX2gQo"
+				alt="parking guide"
+				width="0"
+				height="0"
+				sizes="100%"
+			/>
 		</div>
 	);
 }
@@ -22,33 +20,19 @@ export default function Parking() {
 const containerStyling = `
 	flex
 	flex-col
-	h-full
+	grow
 	justify-start
 	items-center
 	pt-8 
-	pb-10 md:pb-0
+	pb-8
 	px-6 md:px-14 lg:px-24
-`;
-
-const contentStyling = `
-	flex
-	flex-col
-	w-full
-	h-full
-`;
-
-const imageContainerStyling = `
-	flex
-	justify-center
-	items-start
+	max-w-[1000px]
 	relative
-	overflow-hidden
 `;
 
 const imgStyling = `
-	object-cover
-	h-full
+	w-full
 	shrink
 	rounded-xl
-	drop-shadow-[0px 5px 5px rgb(0 0 0 / 0.05)]
+	drop-shadow-sm
 `;

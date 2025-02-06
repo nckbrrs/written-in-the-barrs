@@ -21,11 +21,13 @@ export default function PartyMember(props: PartyMemberProps) {
 						: imageContainerStylingRight
 				}
 			>
-				<img
+				<Image
 					className={imgStyling}
 					src={props.imageSrc}
 					alt={`weddingParty-${props.name}`}
-					loading="eager"
+					width="0"
+					height="0"
+					sizes="100%"
 				/>
 			</div>
 			<div
@@ -118,6 +120,8 @@ const nameLabelTextStylingTitle = `
 `;
 
 const imgStyling = `
+	w-full
+	h-full
 	object-cover
 	rounded-full
 	drop-shadow-sm

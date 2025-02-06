@@ -1,15 +1,18 @@
 import ContentHeader from "~/components/ContentHeader";
+import Image from "next/image";
 
 export default function Story() {
 	return (
 		<div className={pageContainerStyling}>
 			<ContentHeader text="OUR STORY" />
 			<div className={imageContainerStyling}>
-				<img
+				<Image
 					className={imageStyling}
-					src={"/images/nickAndBrooke/iris.jpg"}
+					src="https://huy0t4exz6.ufs.sh/f/G7HhnnrqUvCAqRkQs857ZHRixrd0Ua3yoI8ukN6qKWMge2tA"
 					alt="black & white photo of nick and brooke at a coffee shop"
-					loading="eager"
+					width="0"
+					height="0"
+					sizes="100%"
 				/>
 			</div>
 			<div className={storiesContainerStyling}>
@@ -220,11 +223,13 @@ export default function Story() {
 				</div>
 			</div>
 			<div className={imageContainerStyling}>
-				<img
+				<Image
 					className={imageStyling}
-					src={"images/nickAndBrooke/mountain.jpeg"}
-					alt="nick and brooke on a mountain"
-					loading="eager"
+					src="https://huy0t4exz6.ufs.sh/f/G7HhnnrqUvCAXjqOKjF9JXp5nFkG2TyrbUtxPjlC0mB1au4K"
+					alt="black & white photo of nick and brooke at a coffee shop"
+					width="0"
+					height="0"
+					sizes="100%"
 				/>
 			</div>
 		</div>
@@ -254,6 +259,8 @@ const imageContainerStyling = `
 `;
 
 const imageStyling = `
+	w-full
+	h-full
 	object-cover
 	object-[0%_30%]
     drop-shadow-sm

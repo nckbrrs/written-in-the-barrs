@@ -24,7 +24,7 @@ const coreConfig = {
 					generator: {
 						filename: "static/[hash][ext]"
 					}
-				},
+				}
 			]
 		);
 		return config;

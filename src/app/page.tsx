@@ -1,20 +1,25 @@
-"use client";
+import Image from "next/image";
 
 export default function Home() {
 	return (
 		<div className={containerStyling}>
 			<div className={subContainerStyling}>
-				<img
-					src="images/hero.jpeg"
+				<Image
+					src="https://huy0t4exz6.ufs.sh/f/G7HhnnrqUvCAllCUDILArLRp0cS1mTOjnFHVokd5XeuIl7WG"
 					alt="Nick proposing to Brooke in his living room"
 					className={heroImageStyling}
+					width={0}
+					height={0}
+					sizes="100%"
 				/>
 				<div className={blobContainerStyling}>
-					<img
-						src="images/blobWithBranch.png"
+					<Image
+						src="https://huy0t4exz6.ufs.sh/f/G7HhnnrqUvCAqOyixs57ZHRixrd0Ua3yoI8ukN6qKWMge2tA"
 						alt="graphic blob with date and location of wedding"
 						className={blogImgStyling}
-						loading="eager"
+						width={0}
+						height={0}
+						sizes="100%"
 					/>
 					<p className={blobTextStyling}>
 						JUNE 24, 2022
@@ -31,13 +36,13 @@ const containerStyling = `
 	flex
 	flex-col
 	grow
-	max-h-screen md:max-h-[calc(100vh-15rem)]
 	justify-center
 	items-center
-	pt-8 
-	pb-10 md:pb-6
 	px-6 md:px-14 lg:px-24
 	max-w-[1600px]
+	max-h-screen md:max-h-[calc(100vh-16rem)]
+	pt-8
+	pb-8
 	relative
 `;
 
@@ -50,12 +55,13 @@ const subContainerStyling = `
 `;
 
 const heroImageStyling = `
+	w-full
+	h-full
 	object-cover
 	object-[50%_70%]
 	rounded-2xl
 	drop-shadow-md
 	grow
-	
 `;
 
 const blobContainerStyling = `
@@ -79,6 +85,8 @@ const blobTextStyling = `
 `;
 
 const blogImgStyling = `
+	w-full
+	h-full
 	object-cover
 	drop-shadow-md
 `;
