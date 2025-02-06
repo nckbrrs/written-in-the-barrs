@@ -27,6 +27,7 @@ export default function PlaceOfInterest(props: POIProps) {
 					sizes="100%"
 					priority
 					fetchPriority="high"
+					loading="eager"
 				/>
 			</Link>
 			<div className="flex flex-row w-full">

@@ -15,6 +15,7 @@ export default function Story() {
 					sizes="100%"
 					priority
 					fetchPriority="high"
+					loading="eager"
 				/>
 			</div>
 			<div className={storiesContainerStyling}>

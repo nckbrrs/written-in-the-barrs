@@ -14,6 +14,7 @@ export default function Parking() {
 				sizes="100%"
 				priority
 				fetchPriority="high"
+				loading="eager"
 			/>
 		</div>
 	);

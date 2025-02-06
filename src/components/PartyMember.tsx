@@ -30,6 +30,7 @@ export default function PartyMember(props: PartyMemberProps) {
 					sizes="100%"
 					priority
 					fetchPriority="high"
+					loading="eager"
 				/>
 			</div>
 			<div

@@ -16,6 +16,7 @@ export default function Details() {
 					className={imgStyling}
 					priority
 					fetchPriority="high"
+					loading="eager"
 				/>
 				<div className={detailsContainerStyling}>
 					<div className={"flex flex-col items-center"}>

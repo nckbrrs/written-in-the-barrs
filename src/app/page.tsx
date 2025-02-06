@@ -13,6 +13,7 @@ export default function Home() {
 					sizes="100%"
 					priority
 					fetchPriority="high"
+					loading="eager"
 				/>
 				<div className={blobContainerStyling}>
 					<Image
@@ -24,6 +25,7 @@ export default function Home() {
 						sizes="100%"
 						priority
 						fetchPriority="high"
+						loading="eager"
 					/>
 					<p className={blobTextStyling}>
 						JUNE 24, 2022

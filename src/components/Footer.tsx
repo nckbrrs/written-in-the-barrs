@@ -12,6 +12,7 @@ export default function Footer() {
 				className={imgStyling}
 				priority
 				fetchPriority="high"
+				loading="eager"
 			/>
 		</div>
 	);
