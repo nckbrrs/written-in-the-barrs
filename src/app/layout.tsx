@@ -49,7 +49,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={cn(paris.variable, weiss.variable)}>
       <body className={cn(
         "antialiased",
-        "flex flex-col h-screen w-full items-center",
+        "flex flex-col h-screen w-full items-center justify-between",
         "bg-bone"
       )}>
         <TopNav />

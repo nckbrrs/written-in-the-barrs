@@ -2,21 +2,39 @@ import { cn } from "~/lib/utils";
 
 type HamburgerProps = { isOpen: boolean };
 
+const W = 32;               // px — total width
+const H = 22;               // px — total height
+const TRANSLATE_X = 8;      // px — translate hamburger right when open
+const BAR_H = 2;            // px — thickness of each bar
+const TRANSLATE_BAR_Y = 14; // px — distance each outer bar travels to reach center
+
 const bar = cn(
-  "block h-px w-full",
+  "block w-full origin-center",
   "bg-light-terracotta",
-  "transition-all duration-200"
+  "transition-all duration-200",
 );
 
 export default function Hamburger({ isOpen }: HamburgerProps) {
   return (
-    <div className={cn(
-      "relative flex flex-col justify-between",
-      "h-5 w-6"
-    )}>
-      <span className={cn(bar, "origin-center", isOpen ? "translate-y-[9px] rotate-45" : "")} />
-      <span className={cn(bar, isOpen ? "opacity-0" : "")} />
-      <span className={cn(bar, "origin-center", isOpen ? "-translate-y-[9px] -rotate-45" : "")} />
+    <div
+      className={cn(
+        "relative flex flex-col justify-between",
+        "hover:scale-105 transition-transform duration-200"
+      )}
+      style={{ width: W, height: H, transform: isOpen ? `translateX(${TRANSLATE_X}px)` : undefined }}
+    >
+      <span
+        className={cn(bar, isOpen ? "rotate-45" : "")}
+        style={{ height: BAR_H, transform: isOpen ? `translateY(${TRANSLATE_BAR_Y}px)` : undefined }}
+      />
+      <span
+        className={cn(bar, isOpen ? "opacity-0" : "")}
+        style={{ height: BAR_H }}
+      />
+      <span
+        className={cn(bar, isOpen ? "-rotate-45" : "")}
+        style={{ height: BAR_H, transform: isOpen ? `translateY(-${TRANSLATE_BAR_Y}px)` : undefined }}
+      />
     </div>
   );
 }

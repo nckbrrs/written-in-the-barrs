@@ -5,8 +5,8 @@ export default function Home() {
   return (
     <div className={cn(
       "flex flex-col grow justify-center items-center",
-      "px-6 md:px-14 lg:px-24 pt-8 pb-8",
-      "max-w-[1600px] max-h-screen md:max-h-[calc(100vh-16rem)]",
+      "px-6 md:px-14 lg:px-24 md:pt-8 pb-8",
+      "max-w-[1200px] max-h-[calc(100vh-16rem)]",
       "relative"
     )}>
       <div className="flex flex-row h-full 2xl:h-fit justify-center relative">
