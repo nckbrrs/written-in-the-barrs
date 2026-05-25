@@ -1,102 +1,22 @@
-import { motion } from "framer-motion";
+import { cn } from "~/lib/utils";
 
-type HamburgerProps = {
-	isOpen: boolean;
-	onClick: () => void;
-	variant: "thick" | "thin";
-};
+type HamburgerProps = { isOpen: boolean };
 
-export default function Hamburger({
-	isOpen,
-	onClick,
-	variant
-}: HamburgerProps) {
-	const hamburgerBarMotionVariants = {
-		top: {
-			closed: {},
-			open: {
-				rotate: 45,
-				translateY: `${variant === "thick" ? 275 : 525}%`,
-				scale: -0.75
-			}
-		},
-		middle: {
-			closed: {},
-			open: {
-				translateX: -100,
-				opacity: 0
-			}
-		},
-		bottom: {
-			closed: {},
-			open: {
-				rotate: -45,
-				translateY: `-${variant === "thick" ? 275 : 525}%`,
-				scale: -0.75
-			}
-		}
-	};
+const bar = cn(
+  "block h-px w-full",
+  "bg-light-terracotta",
+  "transition-all duration-200"
+);
 
-	const hamburgerStyling = `
-		flex
-		flex-col
-		h-full
-		w-full
-		justify-evenly
-		duration-100
-		rounded-xl
-		p-0
-		drop-shadow-sm
-	`;
-
-	const hamburgerBarStyling = `
-		hamburgerBar
-		flex
-		flex-row
-		w-full
-		bg-lightTerracotta
-	`;
-
-	const hamburgerBarThickStyling = `
-		${hamburgerBarStyling}
-		h-[10%]
-	`;
-
-	const hamburgerBarThinStyling = `
-		${hamburgerBarStyling}
-		h-[5%]
-	`;
-
-	return (
-		<motion.div
-			className={hamburgerStyling}
-			animate={isOpen ? "open" : "closed"}
-			onClick={onClick}
-		>
-			<motion.div
-				className={
-					variant === "thick"
-						? hamburgerBarThickStyling
-						: hamburgerBarThinStyling
-				}
-				variants={hamburgerBarMotionVariants.top}
-			/>
-			<motion.div
-				className={
-					variant === "thick"
-						? hamburgerBarThickStyling
-						: hamburgerBarThinStyling
-				}
-				variants={hamburgerBarMotionVariants.middle}
-			/>
-			<motion.div
-				className={
-					variant === "thick"
-						? hamburgerBarThickStyling
-						: hamburgerBarThinStyling
-				}
-				variants={hamburgerBarMotionVariants.bottom}
-			/>
-		</motion.div>
-	);
+export default function Hamburger({ isOpen }: HamburgerProps) {
+  return (
+    <div className={cn(
+      "relative flex flex-col justify-between",
+      "h-5 w-6"
+    )}>
+      <span className={cn(bar, "origin-center", isOpen ? "translate-y-[9px] rotate-45" : "")} />
+      <span className={cn(bar, isOpen ? "opacity-0" : "")} />
+      <span className={cn(bar, "origin-center", isOpen ? "-translate-y-[9px] -rotate-45" : "")} />
+    </div>
+  );
 }

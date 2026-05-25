@@ -1,71 +1,43 @@
 "use client";
+
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import { cn } from "~/lib/utils";
+
+const REDIRECT_DELAY = 5;
 
 export default function NotFound() {
-	const router = useRouter();
-	const [secondsOnPage, setSecondsOnPage] = useState(0);
-	const secondsToWaitBeforeRerouting = 5;
+  const router = useRouter();
+  const [seconds, setSeconds] = useState(REDIRECT_DELAY);
 
-	useEffect(() => {
-		setTimeout(() => {
-			setSecondsOnPage(secondsOnPage + 1);
-		}, 1000);
+  useEffect(() => {
+    if (seconds === 0) {
+      router.push("/");
+      return;
+    }
+    const t = setTimeout(() => setSeconds((s) => s - 1), 1000);
+    return () => clearTimeout(t);
+  }, [seconds, router]);
 
-		if (secondsOnPage >= secondsToWaitBeforeRerouting) {
-			router.push("/");
-		}
-	}, [secondsOnPage]);
-
-	return (
-		<div className={containerStyling}>
-			<p className={shrugStyling}>🤷‍♂️</p>
-			<p className={oopsStyling}>Oops! There's nothing here!</p>
-			<p className={redirectStyling}>
-				In{" "}
-				<span className={secondsStyling}>
-					{secondsToWaitBeforeRerouting - secondsOnPage}
-				</span>{" "}
-				seconds, you will be navigated
-				<br />
-				to the <Link href="/">home page.</Link>
-			</p>
-		</div>
-	);
+  return (
+    <div className="flex flex-col justify-center items-center w-full h-full">
+      <p className="text-4xl mb-2">🤷‍♂️</p>
+      <p className={cn(
+        "font-weiss font-bold text-dark-sky",
+        "text-2xl lg:text-5xl text-center"
+      )}>
+        Oops! There&apos;s nothing here!
+      </p>
+      <p className={cn(
+        "font-weiss text-dark-sky",
+        "text-lg lg:text-2xl text-center",
+        "px-4"
+      )}>
+        In <span className="font-bold text-2xl">{seconds}</span> seconds, you will be navigated
+        <br />
+        to the <Link href="/">home page.</Link>
+      </p>
+    </div>
+  );
 }
-
-const containerStyling = `
-	flex
-	flex-col
-	justify-center
-	items-center
-	w-full
-	h-full
-`;
-
-const shrugStyling = `
-	text-4xl
-	mb-2
-`;
-
-const oopsStyling = `
-	font-weiss
-	text-2xl lg:text-5xl
-	font-bold
-	text-darkSky
-	text-center
-`;
-
-const redirectStyling = `
-	font-weiss
-	text-lg lg:text-2xl
-	text-darkSky
-	text-center
-	px-4
-`;
-
-const secondsStyling = `
-	font-bold
-	text-2xl
-`;

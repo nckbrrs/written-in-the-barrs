@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bone: #fbf6f1;
+  --color-black: #212121;
+  --color-dark-terracotta: #a96d4f;
+  --color-light-terracotta: #c3996f;
+  --color-light-sky: #7dbcd8;
+  --color-dark-sky: #4988a3;
+
+  --font-sans: "Helvetica Neue", ui-sans-serif, system-ui, -apple-system, Arial, sans-serif;
+  --font-paris: var(--font-paris-var);
+  --font-weiss: var(--font-weiss-var);
+}
+
+html,
+body {
+  scrollbar-width: none;
+  height: 100%;
+}
+
+@layer base {
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
