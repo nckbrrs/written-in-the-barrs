@@ -16,7 +16,7 @@ export default function Home() {
           className={cn(
             "w-full h-full grow",
             "object-cover object-[50%_70%]",
-            "rounded-2xl drop-shadow-md"
+            "rounded-2xl"
           )}
           width={0}
           height={0}

@@ -60,7 +60,7 @@ export default function TopNav() {
       <nav className={cn(
         "flex flex-row justify-evenly items-center",
         "w-full max-w-[1600px]",
-        "px-12 pt-10 md:pt-14",
+        "pb-4 px-12 pt-10 md:pt-14",
         "relative"
       )}>
         {links.slice(0, 3).map((link) => (
